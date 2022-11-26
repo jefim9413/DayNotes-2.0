@@ -1,0 +1,8 @@
+{
+  "name": "DayNotes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jefim9413/DayNotes-2.0.git",
+  "author": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
+  "license": "MIT"
+}
