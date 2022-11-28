@@ -6,7 +6,7 @@
   "author": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev:server": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+    "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",
