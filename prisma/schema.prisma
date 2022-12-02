@@ -7,8 +7,22 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Task {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  name        String?
-  description String?
+model Note {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  user        User   @relation(fields: [userId], references: [id])
+  userId      String @db.ObjectId
+
+  @@map("note")
+}
+
+model User {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  username String @unique
+  email    String @unique
+
+  Note Note[]
+
+  @@map("user")
 }
